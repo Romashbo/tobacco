@@ -3,8 +3,9 @@ require("dotenv").config(); // Загружаем переменные окру�
 const { Telegraf, Markup } = require("telegraf");
 const admin = require("firebase-admin");
 
-const firebaseAdminConfig = JSON.parse(process.env.FIREBASE_CONFIG);
+const firebaseConfig = JSON.parse(process.env.FIREBASE_CONFIG);
 
+// Инициализация Firebase с использованием конфигурации
 admin.initializeApp({
   credential: admin.credential.cert(firebaseConfig),
 });
