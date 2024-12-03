@@ -2,7 +2,7 @@ require("dotenv").config(); // Загружаем переменные окру�
 
 const { Telegraf, Markup } = require("telegraf");
 const admin = require("firebase-admin");
-const serviceAccount = require('./canadatobacco-e5f2a-firebase-adminsdk-dxq87-52a544f229.json');
+const serviceAccount = process.env.GOOGLE_APPLICATION_CREDENTIALS;;
 
 
 admin.initializeApp({
