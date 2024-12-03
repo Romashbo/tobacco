@@ -6,7 +6,7 @@ const serviceAccount = require('./canadatobacco-e5f2a-firebase-adminsdk-dxq87-52
 
 
 admin.initializeApp({
-  credential: admin.credential.cert(firebaseConfig),
+  credential: admin.credential.cert(serviceAccount),
 });
 
 const db = admin.firestore();
