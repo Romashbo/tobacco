@@ -3,11 +3,10 @@ require("dotenv").config(); // Загружаем переменные окру�
 const { Telegraf, Markup } = require("telegraf");
 const admin = require("firebase-admin");
 
-const serviceAccount = require('/root/new-tobacco/canadatobacco-e5f2a-firebase-adminsdk-dxq87-52a544f229.json');
-
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
+  credential: admin.credential.cert(require(process.env.GOOGLE_APPLICATION_CREDENTIALS)),
 });
+
 
 const db = admin.firestore();
 const itemsRef = db.collection("items");
