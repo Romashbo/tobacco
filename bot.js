@@ -3,8 +3,7 @@ require("dotenv").config(); // Загружаем переменные окру�
 const { Telegraf, Markup } = require("telegraf");
 const admin = require("firebase-admin");
 
-const firebaseConfig = JSON.parse(process.env.FIREBASE_CONFIG);
-
+const firebaseConfig = require("../CanadaTobaccoBot/canadatobacco-e5f2a-firebase-adminsdk-dxq87-52a544f229.json");
 // Инициализация Firebase с использованием конфигурации
 admin.initializeApp({
   credential: admin.credential.cert(firebaseConfig),
